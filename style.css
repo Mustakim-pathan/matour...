@@ -1,0 +1,2563 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+
+.mono-nav{
+    display: none;
+}
+
+.first-section{
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    /* display: flex; */
+    /* border: 2px solid red; */
+    /* padding: 0 10px; */
+    overflow: hidden;
+  
+    
+}
+
+.first-section::before{
+    content: '';
+    width: 100%;
+    height: 120vh;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.6084558823529411) 0%, rgba(0,0,0,0) 100%);
+    position: absolute;
+    overflow: hidden;
+    /* z-index:11;   */
+}
+.img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    top: 0;left: 0;
+    animation-name: xyz;
+    animation-iteration-count: infinite;
+    animation-duration: 15s; 
+    z-index: -1;
+}
+@keyframes xyz {
+    0%,100%{
+        background: url(kelingking-beach-nusa-penida-bali-indonesia-.jpg);
+        background-size: cover;
+    }
+    25%{
+        background: url(padar-island-labuan-bajo-indonesia.jpg);
+        background-size: cover;
+    }
+    50%{
+        background: url(amazing-sunrise-in-mount-bromo.jpg);
+        background-size: cover;
+    }
+    75%{
+        background: url(night-temple-in-thailand.jpg);
+        background-size: cover;
+    }
+}
+
+
+.nav-conainer{
+    width: 100%;
+    height: 20%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 30px 40px;
+    
+}
+
+.nav-conainer img{
+    width: 150px;
+    z-index: 11111111111111!important;
+}
+
+.nav-conainer i{
+    color: white;
+    font-size: 25px;
+    z-index: 1111111111111111;
+}
+
+/* icon hover */
+
+.icon-hover{
+    width: 20%;
+    height: 120vh;
+    position: fixed;
+    /* background-color: black; */
+    left: -100%;
+    top: -1px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+    transition: .5s;
+    padding: 50px 10px;
+}
+
+i:hover .icon-hover{
+    left: 0;
+    transition: .5s;
+}
+
+
+.icon-hover ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    /* border: 3px solid red; */
+}
+
+.icon-hover ul li{
+    width: 100%;
+    /* border: 2px solid yellow; */
+    display: flex;
+}
+
+.icon-hover ul li a{
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 14px;
+    /* border: 3px solid green; */
+    justify-content: space-between;
+  
+}
+
+.icon-hover ul li a:hover{
+    background-color: #fff;
+}
+
+.icon-hover ul i{
+    font-size: 15px;
+    /* margin-left: 100px; */
+}
+
+.main-nav{
+    width: 50%;
+    height: 60%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 111111;
+    border-radius: 200px;
+    position: relative;
+  
+}
+.main-nav ul{
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    /* gap: 50px; */
+
+}
+
+.main-nav ul li a{
+    font-size: 12px;
+}
+
+.main-nav li{
+    transition: .5s;
+    padding:  10px 20px;
+    border-radius: 20px;
+
+}
+
+.main-nav li:hover{
+    background-color: white;
+    transition: .5s;
+
+}
+.main-nav li:hover a{
+    color: black;
+}
+
+.main-nav li:hover i{
+    color: black;
+}
+
+
+
+.main-nav ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-nav i{
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+
+.dropmenu{
+    position: relative;
+    display: flex;
+}
+.dropmenu:hover ul.dropdown{
+    opacity: 1;
+
+}
+
+ul.dropdown {
+    width: 200px;
+    background-color: rgb(212, 212, 212);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    top: 30px;
+    left: -10px;
+    text-align: start;
+    transform: translateY(20px);
+    transition: all .5s linear;
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 10px 10px;
+    opacity: 0;
+    gap: 15px;
+    z-index: -111!important;
+
+}
+ul.dropdown li {
+    width: 100%!important;
+    /* border: 2px solid red; */
+    padding: 15px 6px;
+    border-radius: 25px;
+}
+ul.dropdown li a{
+    width: 100%;
+    /* border: 2px solid red; */
+    color: black;
+}
+
+ul.dropdown li:hover{
+    background-color: black;
+}
+ul.dropdown li:hover a{
+    color: white;
+
+}
+
+
+.first-section-data{
+    white-space: 100%;
+    height: 80vh;
+    /* border: 3px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.first-section-data-left{
+    width: 90%;
+    height: 80vh;
+    /* border: 3px solid green; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 20px;
+} 
+.first-section-data-right{
+     /* border: 3px solid red; */
+     padding: 0 40px !important;
+}
+
+.first-section-data-left button{
+    padding: 13px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 14px;
+    
+}
+
+.first-section-data-left h1{
+    color: white;
+    z-index: 11111111!important;
+    font-size: 50px;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+   
+ 
+}
+
+.first-section-data-left button:nth-child(3){
+    color: black;
+    background-color: #fff;
+    z-index: 111111111!important;
+}
+
+
+
+.first-section-data-right{
+    width: 10%;
+    height: 100vh;
+    /* border: 3px solid blue; */
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 20px;
+} 
+
+.first-section-data-right i{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: white;
+    background: rgba(255, 255, 255, 0.039);
+    /* border: 2px solid red; */
+
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.text-con{
+    display: flex;
+    /* border: 2px solid red; */
+    padding: 0 15px;
+}
+.text-section{
+    width: 370px;
+    height: 100px;
+    /* border: 2px solid red;   */
+    margin-top: -20px;
+    margin-left: 10px;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text-section-left{
+    width: 80px;
+    height: 100px;
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-section-left span{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.039);
+
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.text-section-right{
+    width: 300px;
+    height: 100px;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text-section-right p{
+    color: white;
+    z-index: 111111111!important;
+}
+
+
+
+/* second-section */
+
+.second-section{
+    width: 100%;
+    height: 150vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+
+}
+
+.second-section-data{
+    width: 100%;
+    height: 120vh;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.second-section-left{
+    width: 37%;
+    height: 120vh;
+    /* border: 2px solid green; */
+    background: url(beautiful-landscape-of-a-diamond-beach-on-the-island-nusa-penida-e1687499629852.jpg);
+    background-size: cover;
+    /* padding: 0 20px; */
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+
+   /* animation-name: leftimg;
+   animation-duration: 2s;
+   animation-iteration-count: 1; */
+
+    
+}
+
+/* @keyframes leftimg {
+
+    0%{
+         transform: translatex(-300px);
+         opacity: 0;
+    }
+
+    100%{
+        transform: translatex(0);
+        opacity: 1;
+    }
+    
+} */
+
+
+
+
+.second-section-left::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+    padding: 0 20px;
+    top: 0;left: 0;
+    /* z-index: 11;   */
+}
+.second-left-mini{
+    width: 80%;
+    height: 100px;
+    /* border: 2px solid red; */
+    z-index: 1111111111!important;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 5px;
+    text-align: start;
+    padding: 0 30px;
+  
+}
+
+.second-left-mini h1{
+    color: white;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.second-left-mini p{
+    
+    color: rgb(141, 138, 138);
+}
+
+.left-mini-1{
+     width: 100px;
+     height: 100px;
+     /* border: 3px solid green; */
+     display: flex;
+     align-items: start;
+     justify-content: start;
+}
+
+.left-mini-1 i{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+    background: rgba(255, 255, 255, 0.039);
+
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.second-section-right{
+    width: 60%;
+    height: 120vh;
+    /* border: 2px solid blue; */
+    margin-left: 38px;
+    background-size: cover;
+
+
+
+    /* animation-name: rightimg;
+   animation-duration: 2s;
+   animation-iteration-count: 1; */
+
+}
+
+/* @keyframes rightimg {
+
+    0%{
+         transform: translatex(300px);
+         opacity: 0;
+    }
+
+    100%{
+        transform: translatex(0);
+        opacity: 1;
+    }
+    
+} */
+
+
+
+
+.second-section-top{
+    width: 100%;
+    height: 45%;
+    /* border: 2px solid black; */
+    display: flex;
+
+}
+
+
+
+.top-left{
+    width: 350px;
+    height: 300px;
+    /* border: 3px solid black; */
+    background: url(statue-in-grand-palace-at-bangkok-e1687499997542.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    overflow:hidden ;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+}
+
+.top-left::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+    
+    
+}
+
+.top-left-mini{
+    width: 80%;
+    height: 30%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.top-left-mini h1{
+    color: white;
+    z-index: 1111111111;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.top-left-mini p{
+    color: rgb(185, 185, 185);
+    
+}
+
+.top-left-mini-1{
+    width: 20%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid green; */
+
+    
+}
+
+.top-left-mini-1 i{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+    background: rgba(255, 255, 255, 0.039);
+
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.top-right{
+    width: 350px;
+    height: 300px;
+    /* border: 3px solid black; */
+    background: url(traditional-turkish-breakfast-with-fruits-with-cappadocia-view-e1687500026252.jpg);
+    background-size: cover;
+    margin-left: 30px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.top-right::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+    /* z-index:11;   */
+}
+
+
+.top-right-mini{
+    width: 80%;
+    height: 30%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.top-right-mini h1{
+    color: white;
+    z-index: 1111111111;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+
+    
+}
+
+.top-right-mini p{
+    color: rgb(76, 74, 74);
+    
+}
+
+.top-right-mini-1{
+    width: 20%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid green; */
+
+    
+}
+
+.top-right-mini-1 i{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+    background: rgba(255, 255, 255, 0.039);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.second-section-bottum{
+    width: 100%;
+    height: 55%;
+    /* border: 2px solid yellow; */
+    background: url(padar-island-with-scenic-high-view-of-three-beautiful-white-sandy-beaches-surrounded-by-a-wide-ocean-e1687500056237.jpg);
+    background-size: cover;
+    border-radius: 20px ;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+
+
+    /* padding: 0 20px; */
+
+
+}
+
+.second-section-bottum::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index:11;   */
+}
+
+.bottum-mini{
+    width: 80%;
+    height: 30%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: start;
+    justify-content: center;   
+    flex-direction: column; 
+    padding: 0 30px;
+    gap: 5px;
+}
+
+.bottum-mini h1{
+    color: white;
+    z-index: 111111111!important;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.bottum-mini p{
+    color: white;
+    font-size: 13px;
+}
+
+
+.bottum-mini-1{
+    width: 20%;
+    height: 30%;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bottum-mini-1 i{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+    background: rgba(255, 255, 255, 0.039);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* theird-section */
+
+
+
+.theird-section{
+    width: 100%;
+    height: 120vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theird-section-left{
+    width: 40%;
+    height: 100vh;
+    /* border: 2px solid green; */
+}
+
+
+.theird-top{
+    width: 100%;
+    height: 40%;
+    /* border: 2px solid brown; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 10px;
+   
+}
+
+.theird-top h1{
+    font-size: 50px;
+    font-family: "El Messiri", sans-serif;
+    line-height: 50px;
+   
+}
+
+.theird-bottum{
+    width: 100%;
+    height: 60%;
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.theird-bottum-mini{
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theird-bottum-mini-left{
+    width: 20%;
+    height: 70%;
+    /* border: 2px solid purple; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.theird-bottum-mini-left i{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 25px;
+
+}
+
+.theird-bottum-mini-right{
+    width: 80%;
+    height: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.theird-bottum-mini-right h1{
+    font-size: 25px;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+.theird-section-right{
+    width: 55%;
+    height: 90vh;
+    background: url(young-beautiful-woman-walking-on-campuhan-ridge-way-of-artists-in-bali-ubud--e1687499737698.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    padding: 20px 10px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 20px;
+}
+
+.theird-section-right-mini-1{
+    width: 270px;
+    height: 150px;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(wat-benchamabophit-temple-in-bangkok-thailand-the-marble-temple-in-bangkok-e1687500082664.jpg);
+    background-size: cover;
+    background-position: 8px;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+.theird-section-right-mini-1 span{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: #fff;
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    position: relative;
+    /* animation-name: mm;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; */
+}
+
+.theird-section-right-mini-1 span::before{
+    content: '';
+    width: 100%;
+    border-radius: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;left: 0;
+    animation-name: mm;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* z-index: -111; */
+
+}
+.theird-section-right-mini-2{
+    width: 270px;
+    height: 150px;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(cheerful-young-woman-walking-on-local-market-e1687499796764.jpg);
+    background-size: cover;
+    background-position: 8px;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+.theird-section-right-mini-2 span{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: #fff;
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    position: relative;
+    /* animation-name: mm;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; */
+}
+
+.theird-section-right-mini-2 span::before{
+    content: '';
+    width: 100%;
+    border-radius: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;left: 0;
+    animation-name: mm;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* z-index: -111; */
+
+}
+
+
+@keyframes mm {
+    0%,100%{
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.356);
+        opacity: 0;
+
+    }
+
+    50%{
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.356);
+        opacity: 1;
+     
+    }
+}
+
+
+
+/* forth-section */
+
+
+
+.forth-section{
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forth-section-left{
+    width: 60%;
+    height: 60vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.forth-section-left h1{
+    color: white;
+    font-size: 50px;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 55px;
+}
+
+.forth-section-right{
+    width: 60%;
+    height: 60vh;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 80px;
+}
+
+.forth-section-right p{
+    color: white;
+}
+
+.forth-section-right  button{
+    padding: 20px 30px;
+    border-radius: 50px;
+}
+
+
+
+/* fifth--section */
+
+
+.fifth{
+    width: 100%;
+    /* height: 120vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    background-image: url(padar-island-labuan-bajo-indonesia.jpg);
+    background-size: 100%;
+    transition: .4s linear;
+    background-position: center  ;
+}
+.fifth-secton{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+}
+.fifth-secton-box{
+    width: 25%;
+    height: 100%;
+    z-index: 111;
+    border-right: 1px solid rgba(255, 255, 255, 0.272);
+    position: relative;
+    overflow: hidden;
+
+}
+.fifth-secton-box:hover{
+    background-color: rgba(0, 0, 0, 0.167);
+
+}
+.fifth-secton-box:before{
+    content: "";
+    width: 100%;
+    height: 22%;
+    background-color: black;
+    position: absolute;
+    top: -22%;
+    transition: .5s;
+    
+}
+.fifth-secton-box:hover:before{
+    transition: .5s;
+    top: 0;
+}
+
+.fifth-secton-box:after{
+    content: "View More";
+    width: 100%;
+    color: white;
+    position: absolute;
+    text-align: center;
+    transition: .5s;
+    opacity: 0;
+    bottom: -40px;
+    transition: .3s;
+    /* position: relative; */
+    font-size: 13px;
+}
+
+.fifth-secton-box:hover:after{
+    transition: .3s;
+    /* top: 0; */
+    opacity: 1;
+    bottom: 20px;
+}
+
+
+.fifth-secton-box-mini{
+    width: 100%;
+    height: 22%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+.fifth-secton-box-mini h1{
+    color: #fff;
+    font-size: 13px;
+}
+
+.fifth-secton-box-mini h2{
+    color: #fff;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* sixth-section */
+
+
+
+.sixth-secton{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    flex: 105% 0 0;
+    padding: 40px 0;
+    gap: 30px;
+}
+
+.sixth-section-box{
+    width: 300px;
+    height: 300px;
+    /* border: 2px solid green; */
+    background-color: rgba(134, 124, 124, 0.116);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation-name: imganime;
+    animation-duration: 12s;
+    /* animation-timing-function:  linear; */
+    animation-iteration-count: infinite;
+   
+   
+}
+.sixth-secton:hover .sixth-section-box{
+    animation-play-state: paused;
+}
+
+@keyframes imganime {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-220%);
+    }
+    75%{
+        transform: translateX(-330%);
+    }
+    100%{
+        transform: translateX(-440%);
+    }
+
+
+   
+}
+
+
+
+.sixth-section-box-top{
+    width: 300px;
+    height: 200px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.sixth-section-box-top p{
+    color: white;
+}
+
+.sixth-section-box-bottum{
+    width: 300px;
+    height: 100px;
+    /* border: 2px solid blue; */
+    display: flex;
+}
+
+
+
+.sixt-box-left{
+    width: 100px;
+    height: 100px;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sixt-box-left img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.sixth-box-right{
+    width: 200px;
+    height: 100px;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sixth-box-right h1{
+    color: white;
+    font-size: 25px;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 35px;
+}
+
+.sixth-box-right p{
+    color: rgba(255, 255, 255, 0.372);
+}
+
+
+@keyframes imganimation {
+    0%{
+        transform: translatex(0);
+    }
+
+
+    100%{
+        transform: translatex(-110%);
+    }
+}
+
+
+/* sevanth--section */
+
+
+
+.sevanth-section{
+    width: 100%;
+    height: 50vh;
+    /* border: 2px solid red;
+     */
+    display: flex;
+}
+
+
+.sevanth-section-left{
+    width: 50%;
+    height: 50vh;
+    /* border: 2px solid brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+
+}
+
+.sevanth-section-left h1{
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 45px;
+    line-height: 65px;
+}
+
+.sevanth-section-right{
+    width: 50%;
+    height: 50vh;
+    /* border: 2px solid purple; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column  ;
+    gap: 20px;  
+
+}
+
+
+
+.sevanth-section-right button{
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+}
+
+.sevanth-section-right button:nth-child(2){
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+}
+
+
+
+
+
+.eight-section{
+    width: 100%;
+    height: 120vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.eight-section-left{
+    width: 50%;
+    height: 100vh;
+    /* border: 2px solid green; */
+    background: url(magnificient-view-from-top-of-padar-island-e1687500147631.jpg);
+    background-size: cover;
+    border-radius:  0 20px 20px 0;}
+
+
+/* @keyframes leftanimation {
+     0%{
+           transform: translatex(-300px);
+           opacity: 0;
+     }
+
+     100%{
+        transform: translatex(0);
+        opacity: 1;
+          
+     }
+} */
+
+.eight-section-right{
+    width: 50%;
+    height: 120vh;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+
+    /* animation-name: rightanimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1; */
+    
+}
+
+
+/* @keyframes rightanimation {
+    0%{
+          transform: translatex(300px);
+          opacity: 0;
+    }
+
+    100%{
+       transform: translatex(0);
+       opacity: 1;
+         
+    }
+} */
+
+.eight-section-right-data{
+     width: 100%;
+     height: 100vh;
+     /* border: 3px solid brown; */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+
+.eight-section-right-top{
+    width: 80%;
+    height: 45%;
+    /* border: 2px solid black; */
+    background: url(couple-traveling-by-train-e1687501037460.jpg);
+    background-size: cover;
+    border-radius: 20px;
+
+
+}
+
+.eight-section-right-bottum{
+    width: 90%;
+    height: 55%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+padding: 0 20px;
+}
+
+.bottum-left{
+   width: 55%;
+   height: 100%;
+   /* border: 2px solid yellow; */
+   background: url(dhammayazika-pagoda-bagan-pagan-buddhist-temples-and-ancient-city-myanmar-burma--e1687500176351.jpg);
+   background-size: cover;
+   border-radius: 20px;
+   scale: .9;
+   margin-bottom: -90px;
+}
+
+.bottum-right{
+    width: 50%;
+    height: 70%;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 10px;
+    scale: .9;
+ }
+
+ .bottum-right i{
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    color: black;
+    border-radius: 50px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .bottum-right h1{
+    color: white;
+    font-size: 20px;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 20px;
+
+ }
+
+ .bottum-right p{
+    color: white;
+    font-size: 12px;
+ }
+
+
+
+
+
+
+
+ .ninth-section{
+    width: 100%;
+    height: 50vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .ninth-section-data{
+    width: 500px;
+    height: 300px;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ .ninth-section-data h1{
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 35px;
+    line-height: 40px;
+    /* text-align: center; */
+
+ }
+
+ .ninth-section-data p{
+     text-align: center;
+     color: #6c6a6a;
+ }
+
+
+ .navbar-section{
+    width: 450px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: 20px;
+ }
+
+
+ .navbar-section ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+ }
+
+ .navbar-section ul li a{
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+ }
+
+ .navbar-section ul li a:hover{
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+ }
+
+
+
+ /* tenth-section */
+
+ .tenth-section{
+    width: 100%;
+    height: 150vh;
+    /* border: 3px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+
+ .tenth-section-data{
+    width: 94%;
+    height: 130vh;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+ }
+
+ .tenth-section-box{
+    width: 250px;
+    height: 350px;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    background: url(view-of-thai-traditional-longtail-boat-over-clear-sea-and-sky-in-the-sunny-day-e1687500260641.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+
+ }
+
+ .tenth-section-box::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+ }
+
+ .tenth-section-box-mini{
+    width: 250px;
+    height: 100px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .tenth-section-box-mini-left{
+    width: 125px;
+    height: 100px;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    padding: 13px 20px;
+    gap: 10px;
+ }
+
+ .tenth-section-box-mini-left h1{
+    color: #fff;
+    font-size: 20px;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    z-index: 11111111!important;
+    line-height: 10px;
+ }
+
+ .tenth-section-box-mini-left span{
+    color: #a8a5a5;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 111;
+
+ }
+
+ .tenth-section-box-mini-right{
+    width: 125px;
+    height: 100px;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 5px;
+ }
+
+ .tenth-section-box-mini-right h1{
+    color: #fff;
+    font-size: 12px;
+    font-weight: lighter;
+    z-index: 1111111;
+ }
+
+ .tenth-section-box-mini-right h2{
+    color: #fff;
+    z-index: 11;
+    font-size: 30px;
+ }
+
+
+ .tenth-section-box:nth-child(2){
+    background: url(kelingking-beach-nusa-penida-bali-indonesia-1-1-e1687500287123.jpg);
+    background-size: cover;
+    background-position: 10px;
+    background-position-x: -100px;
+    position: relative;
+    overflow: hidden;
+
+
+ }
+
+ .tenth-section-box:nth-child(2):before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+ }
+
+ .tenth-section-box:nth-child(3){
+    background: url(dzFB8xeWg1M-unsplash.jpg);
+    background-size: cover;
+    background-position: 10px;
+    background-position-x: -150px;
+    position: relative;
+    overflow: hidden;
+
+
+ }
+
+ .tenth-section-box:nth-child(3) h1{
+    line-height: 20px;
+ }
+
+ .tenth-section-box:nth-child(3):before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+ }
+ 
+
+ .tenth-section-box:nth-child(4){
+    background: url(dhammayazika-pagoda-bagan-pagan-buddhist-temples-and-ancient-city-myanmar-burma--e1687500176351.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+ }
+
+ .tenth-section-box:nth-child(4) h1{
+    line-height: 20px;
+ }
+
+ .tenth-section-box:nth-child(4):before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+ }
+
+ .tenth-section-box:nth-child(5){
+    background: url(pura-taman-saraswati-e1687500316374.jpg);
+     background-size: cover;
+     background-position: 10px;
+     background-position-x: -130px;
+    position: relative;
+    overflow: hidden;
+
+
+ }
+
+ .tenth-section-box:nth-child(5):before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+ }
+
+ .tenth-section-box:nth-child(6){
+    background: url(view-around-marina-bay-at-dusk.jpg);
+    background-size: cover;
+    background-position: 10px;
+    background-position-x: -200px;
+    position: relative;
+    overflow: hidden;
+
+
+ }
+
+ .tenth-section-box:nth-child(6) h1{
+    line-height: 20px;
+ }
+
+ .tenth-section-box:nth-child(6):before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+ }
+
+ .tenth-section-box:nth-child(7){
+    background: url(fujinomiya-shizuoka-japan-with-mt-fuji-e1687500345189.jpg);
+    background-size: cover;
+    background-position: 10px;
+    background-position-x: -150px;
+    position: relative;
+    overflow: hidden;
+
+
+ }
+
+ .tenth-section-box:nth-child(7):before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+ }
+
+ .tenth-section-box:nth-child(8){
+    background: url(woman-with-amazing-view-of-padar-island-in-komodo-national-park-indonesia-enjoying-tropical-e1687500365952.jpg);
+    background-size: cover;
+    background-position: 10px;
+    background-position-x: -150px;
+    position: relative;
+    overflow: hidden;
+
+ }
+
+ .tenth-section-box:nth-child(8) h1{
+    line-height: 20px;
+ }
+
+
+ .tenth-section-box:nth-child(8):before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6084558823529411) 100%);
+    position: absolute;
+ }
+
+
+/* elavanth-section */
+
+
+
+
+ .elavanth-section{
+    width: 100%;
+    /* height: 170vh; */
+    background-color: black;
+ }
+
+ .elavanth-section-top{
+    width: 100%;
+    height: 70vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .elavanth-section-top-left{
+    width: 50%;
+    height: 70vh;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ .elavanth-section-top-left-mini{
+   width: 100%;
+   height: 40%;
+   display: flex;
+   align-items: end;
+   justify-content: center;
+   /* border: 2px solid red; */
+  
+ }
+
+ .elavanth-section-top-left-mini h1{
+    font-size: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+
+ }
+.b-l{
+    width: 80%;
+    height: 70%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+}
+ .bottum-left-mini{
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: 20px 8px;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+    transition: .4s linear;
+
+ }
+ .bottum-left-mini:hover{
+    transition: .4s linear;
+    height: 150px;
+ }
+ .bottum-left-mini h1{
+    color: white;
+    font-size: 20px;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+ }
+
+ .bottum-left-mini i{
+    color: #fff;
+ }
+ .bottum-left-mini p{
+    color: rgba(255, 255, 255, 0.566);
+    margin-top: 20px;
+    transition: .4s linear;
+    display: none;
+ }
+
+
+  
+ .bottum-right-mini:hover p{
+    display: flex;
+    transition: .4s linear;
+ }
+ .elavanth-section-top-right{
+    width: 50%;
+    height: 70vh;
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    
+ }
+
+ .elavanth-section-top-right-mini{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    gap: 10px;
+    padding:0 40px ;
+ }
+
+ .b-2{
+    width: 80%;
+    height: 70%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 35px;
+}
+
+ .elavanth-section-bottum-right-mini{
+    width: 100%;
+    height: 30%;
+    /* border: 5px solid rgb(179, 10, 10); */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px; 
+    /* padding: 0 30px; */
+   
+    
+  }
+
+  .elavanth-section-top-right-mini button{
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 10px;
+    border: none;
+  }
+
+  .elavanth-section-top-right-mini p{
+    color: rgb(158, 154, 154);
+    font-size: 14px;
+  }
+
+
+ .bottum-right-mini{
+    width: 100%;
+    height: 60px;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    padding: 20px 8px;
+    transition: .4s linear;
+    flex-wrap: wrap;
+
+overflow: hidden;
+  }
+  .bottum-right-mini:hover{
+    transition: .4s linear;
+    height: 140px;
+  }
+  .bottum-right-mini p{
+    color: rgba(255, 255, 255, 0.566);
+    margin-top: 20px;
+    transition: .4s linear;
+    display: none;
+ }
+
+  .bottum-left-mini:hover p{
+    display: flex;
+    transition: .4s linear;
+ }
+
+  .bottum-right-mini h1{
+    color: white;
+    font-size: 20px;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .bottum-right-mini i{
+    color: #fff;
+ }
+
+ #video{
+
+   width: 80%!important;
+   height: 72vh;
+   scale: 1.1;
+   object-fit: cover;
+   border-radius: 40px;
+   /* border: 2px solid red; */
+   transition: opacity 1s;
+   
+}
+
+.bottum-right-mini{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: 20px 8px;
+    flex-wrap: wrap;
+
+ }
+
+ .elavanth-section-bottum{
+    width: 100%;
+    height: 100vh;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+
+
+
+
+
+ /* twelth-section */
+
+
+ .twelth-section{
+    width: 100%;
+    height: 120vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .twelth-section-data{
+    width: 94%;
+    height: 100vh;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .twelth-section-data-left{
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ .twelth-section-data-left-top{
+    width: 95%;
+    height: 40%;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+ }
+
+  .twelth-section-data-left-top h1{
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    line-height: 55px;
+ }
+
+ .twelth-section-data-left-top p{
+    color: rgb(104, 102, 102);
+    font-size: 14px;
+ }
+
+ .twelth-section-data-left-bottum{
+    width: 95%;
+    height: 55%;
+    /* border: 2px solid brown; */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background: url(people-on-the-beach-on-bali-indonesia-vacation-and-adventure-beach-and-large-waves-.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .twelth-section-data-left-bottum::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.459) 20%, rgba(0, 0, 0, 0.459) 100%);
+    position: absolute;
+ }
+
+ .twelth-section-data-left-bottum-mini{
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px!important;
+    gap: 10px;
+ }
+
+ .twelth-section-data-left-bottum-mini h1{
+     color: #fff;
+     font-family: "El Messiri", sans-serif;
+     font-optical-sizing: auto;
+     font-size: 25px;
+     z-index: 111111;
+     line-height: 30px;
+     
+ }
+
+ .twelth-section-data-left-bottum-mini span{
+    color: #fff;
+    z-index: 1111;
+    font-size: 12px;
+    font-weight: bolder;
+ }
+
+
+
+
+ .twelth-section-data-right{
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ .twelth-section-data-right-mini{
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+ }
+
+ .right-mini-left{
+    width: 250px;
+    height: 160px;  
+     /* border: 2px solid green; */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 20px;
+ }
+
+   .right-mini-left img{
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 20px;
+ }
+
+
+ .right-mini-right{
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.right-mini-right h1{
+    font-size: 20px;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 25px;
+}
+
+.right-mini-right p{
+    color: #848181;
+    font-size: 14px;
+}
+
+.right-mini-right span{
+    font-size: 12px;
+}
+
+
+
+
+
+
+/* therteenth-section */
+
+
+
+.therteenth-section{
+    width: 100%;
+    height: 70vh;
+    /* border: 2px solid red; */
+    background: url(chureito-pagoda-at-fuji-mountain-beautiful-japanese-landmarks-and-landscapes-e1687500237810.jpg);
+    background-size: cover;
+    background-position: 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.therteenth-section:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.728) 20%, rgba(0, 0, 0, 0.596) 100%);
+    position: absolute;
+ }
+
+ .therteenth-section h1{
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 111;
+
+
+ }
+
+ .therteenth-section p{
+    color: #848181c8;
+    text-align: center;
+    z-index: 111;
+
+ }
+
+ .therteenth-section button{
+    padding: 18px 25px;
+    border-radius: 50px;
+    border: none;
+    z-index: 111;
+ }
+
+
+
+
+ /* /forteenth-section */
+
+
+
+
+ .forteenth-section{
+    width: 100%;
+    height: 55vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ .forteenth-section-data{
+    width: 94%;
+    height: 53vh;
+    /* border: 2px solid red; */
+    display: flex;
+    /* flex-direction: column; */
+ }
+
+ .forteenth-section-data-left{
+    width: 30%;
+    height: 90%;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid grey;
+ }
+
+ .forteenth-section-data-left img{
+    width: 150px;
+    height: 70px;
+    object-fit: contain;
+    /* border: 3px solid red; */
+ }
+
+ .forteenth-section-data-left p{
+    color: #aca3a3;
+
+ }
+
+ .forteenth-section-data-left-mini{
+     width: 150px;
+     height: 50px;
+     /* border: 2px solid red; */
+     display: flex;
+     align-items: center;
+     justify-content: start;
+     gap: 10px;
+ }
+
+ .forteenth-section-data-left-mini i{
+    color: #fff;
+    font-size: 18px;
+ }
+
+ .forteenth-section-data-right{
+    width: 70%;
+    height: 90%;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid grey;
+
+ }
+
+ .forteenth-section-data-right-mini{
+     width: 25%;
+     height: 60%;
+     /* border: 1px solid blue; */
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: start;
+     gap: 15px;
+ }
+
+ .forteenth-section-data-right-mini h1{
+    color: #fff;
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 25px;
+ }
+
+ .forteenth-section-data-right-mini p{
+    color: #aca3a3;
+    font-size: 15px;
+ }
+ .forteenth-section-data-right-mini p:hover{
+    color: white;
+    cursor: pointer;
+ }
+ /* .forteenth-section-data-right-mini:nth-child(2){
+    width: 27%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+} */
+
+
+.forteenth-section-data-right-mini:nth-child(3){
+    width: 37%;
+    height: 65%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+}
+
+.forteenth-section-data-right-mini:nth-child(3) p{
+    color: #aca3a3;
+
+}
+
+.forteenth-section-data-right-mini:nth-child(3) input{
+    width: 300px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50px;
+    padding: 0 20px;
+    border: 1px solid grey;
+    color: #fff;
+} 
+
+.forteenth-section-data-right-mini:nth-child(3) input:focus{
+    border: 1px solid white;
+}
+
+.forteenth-section-data-right-mini:nth-child(3) button{
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+    font-size: 12px;
+    position: absolute;
+    top: 126px;
+    left: 190px;
+}
+
+
+.footer-section-end{
+    width: 94%;
+    height: 10%;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-section-end-left{
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.footer-section-end-left p{
+    color: #aca3a3;
+    font-size: 13px;
+
+}
+
+.footer-section-end-right{
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: start;
+    justify-content: end;
+
+}
+
+.footer-section-end-right p{
+    color: #aca3a3;
+    font-size: 13px;
+
+}
+
+
+
+
+
+ 
+
+.forteenth-section-data-right-mini a{
+    text-decoration: none !important;
+}
+
+
+
+
+
+
+
